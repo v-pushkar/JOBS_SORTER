@@ -26,18 +26,15 @@ const _COMPANYS = ()=>{ // function for criating big arr for test
 
 // const sort_COMPANYS = COMPANYS.sort((a,b)=>a.requires.length - b.requires.length) 
 
-
-const RESULT = (arr, req)=>{	// get new arr with companys whear can work
-		
+const RESULT = (arr, req)=>{	// get new arr with companys whear can work		
 		const _result = []
-		for(let i = 0; arr[i].requires.length <= req.length; i++ ) {
-			
+		for(let i = 0; arr[i].requires.length <= req.length; i++ ) {			
 				if(!arr[i].requires.length){ 		//check, company have requiers or not
 			_result.push(arr[i])
 		}else if(compareFn(arr[i], req)){
 			_result.push(arr[i])
 		}
-		}			
+		}
 	
 	return _result
 }
